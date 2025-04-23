@@ -27,5 +27,5 @@ COPY . .
 # Expone el puerto (Railway usará la variable $PORT)
 EXPOSE 8000
 
-# Comando de inicio (ajusta si tu archivo principal no es vista.py)
-CMD ["uvicorn", "vista:app", "--host", "0.0.0.0", "--port", "8000"]
+# Comando de inicio (ahora usando shell para expandir $PORT)
+CMD uvicorn vista:app --host 0.0.0.0 --port $PORT
