@@ -1,4 +1,10 @@
 {
+  "name": "mi-app",
+  "version": "1.0.0",
+  "main": "vista.py",
+  "scripts": {
+    "start": "node vista.py"
+  },
   "dependencies": {
     "express": "^4.21.2",
     "leaflet": "^1.9.4",
