@@ -27,5 +27,5 @@ COPY . .
 # Expone el puerto (Railway usará la variable $PORT)
 EXPOSE 8000
 
-# Comando de inicio (ahora usando shell para expandir $PORT)
-CMD uvicorn vista:app --host 0.0.0.0 --port $PORT
+# Comando de inicio (usando shell para expandir $PORT)
+CMD ["sh", "-c", "uvicorn vista:app --host 0.0.0.0 --port $PORT"]
