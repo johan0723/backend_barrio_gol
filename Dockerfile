@@ -19,4 +19,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "echo Running on port ${PORT:-8000}; uvicorn vista:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD sh -c "echo 'PORT is:' \$PORT; env; uvicorn vista:app --host 0.0.0.0 --port \${PORT:-8000}"
